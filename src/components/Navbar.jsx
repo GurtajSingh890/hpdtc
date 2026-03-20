@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from "react";
 import {
-  Search,
+  Search
   MapPin,
   Menu,
   X,
