@@ -73,29 +73,19 @@ export default function Hero() {
               className="d-flex justify-content-center mt-4 gap-3 gap-md-4 flex-column flex-sm-row"
             >
               <motion.button
-                whileHover={{ scale: 1.04, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="rounded-pill fw-bold shadow-lg position-relative overflow-hidden group backdrop-blur-md border border-white/50 text-white"
+                onClick={() => window.open("https://play.google.com/store/apps/details?id=nic.hp.hptdc.app&hl=en", "_blank")}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-pill fw-bold text-white border-0 position-relative"
                 style={{
-                  padding: "14px 32px",
-                  fontSize: "16px",
-                  background: "#F97316",
-                  border: "none",
+                  padding: "16px 36px",
+                  fontSize: "1.1rem",
+                  background: "linear-gradient(135deg, #F97316 0%, #C2410C 100%)",
                   cursor: "pointer",
+                  letterSpacing: "0.5px"
                 }}
               >
-                <span className="position-relative" style={{ zIndex: 1 }}>
-                  Book Now
-                </span>
-                <div
-                  className="position-absolute top-0 start-0 w-100 h-100"
-                  style={{
-                    transform: "skewX(-20deg) translateX(-150%)",
-                    transition: "transform 0.5s ease",
-                    background:
-                      "linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent)",
-                  }}
-                />
+                <span className="position-relative" style={{ zIndex: 1 }}>Download App</span>
               </motion.button>
 
               <motion.button
@@ -103,29 +93,18 @@ export default function Hero() {
                   navigate("/weather");
                   window.scrollTo(0, 0);
                 }}
-                whileHover={{ scale: 1.04, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="rounded-pill fw-bold shadow-lg position-relative overflow-hidden group backdrop-blur-md text-white"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-pill fw-bold text-white border-0 position-relative"
                 style={{
-                  padding: "14px 32px",
-                  fontSize: "16px",
-                  background: "#F97316",
-                  border: "none",
+                  padding: "16px 36px",
+                  fontSize: "1.1rem",
+                  background: "linear-gradient(135deg, #F97316 0%, #C2410C 100%)",
                   cursor: "pointer",
+                  letterSpacing: "0.5px"
                 }}
               >
-                <span className="position-relative" style={{ zIndex: 1 }}>
-                  Check Weather
-                </span>
-                <div
-                  className="position-absolute top-0 start-0 w-100 h-100"
-                  style={{
-                    transform: "skewX(-20deg) translateX(-150%)",
-                    transition: "transform 0.5s ease",
-                    background:
-                      "linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent)",
-                  }}
-                />
+                <span className="position-relative" style={{ zIndex: 1 }}>Check Weather</span>
               </motion.button>
             </motion.div>
           </motion.div>
