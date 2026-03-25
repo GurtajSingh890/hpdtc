@@ -31,6 +31,7 @@ import Cuisines from "./components/pages/Cuisines";
 import Awards from "./components/pages/Awards";
 import Feedback from "./components/pages/Feedback";
 import Contacts from "./components/pages/Contacts";
+import Adventure from "./components/pages/Adventure";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -85,6 +86,7 @@ export default function App() {
         <Route path="/awards" element={<Awards />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/adventure" element={<Adventure />} />
       </Routes>
 
       <Footer />

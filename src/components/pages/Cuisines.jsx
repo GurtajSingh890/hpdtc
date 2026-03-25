@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ChefHat, Info, UtensilsCrossed } from 'lucide-react';
 
 const CUISINES_DATA = [
@@ -78,6 +78,9 @@ const CUISINES_DATA = [
 ];
 
 export default function Cuisines() {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -108,6 +111,7 @@ export default function Cuisines() {
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 left-0 w-full h-[600px] overflow-hidden z-0 pointer-events-none">
         <motion.div 
+          style={{ y }}
           animate={{ 
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.5, 0.3],
