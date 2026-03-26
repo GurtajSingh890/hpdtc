@@ -55,7 +55,6 @@ export default function App() {
       <Navbar />
 
       <Routes>
-        {/* ✅ Homepage (your current layout) */}
         <Route
           path="/"
           element={
@@ -73,7 +72,6 @@ export default function App() {
           }
         />
 
-        {/* ✅ Other Pages */}
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/hotel-booking" element={<HotelBooking />} />
         <Route path="/huts-cottages" element={<HutsCottages />} />
