@@ -98,7 +98,7 @@ const POPULAR_ROUTES = [
   },
   {
     from: 'Chandigarh', to: 'Manali', duration: '7h 00m', price: '650',
-    image: '',
+    image: 'bus_booking/chandigarh_manali.jpeg',
   },
 ];
 

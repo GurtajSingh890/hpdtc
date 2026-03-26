@@ -7,6 +7,7 @@ import ShimlaImg from './images/shimla.jpeg';
 import ManaliImg from './images/manali.jpg';
 import SpitiVellyImg from './images/spitiy velly.jpg';
 import KinnaurImg from './images/kinnaur.jpeg';
+import DharamshalaImg from './images/dharamshala.jpg';
 
 const places = [
   {
@@ -33,7 +34,7 @@ const places = [
   {
     name: 'Dharamshala',
     desc: 'Little Lhasa',
-    image: '#',
+    image: DharamshalaImg,
     colSpan: 'col-md-3',
     rowSpan: 'h-50',
   },

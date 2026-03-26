@@ -14,6 +14,24 @@ import clsx from "clsx";
 import { Link, useLocation } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 
+// Explore button images 
+import SpitiyVellyImg from './images/spitiy velly.jpg';
+import ManaliRetreatImg from './images/manali_retreat.jpg';
+import ShimlaRidgeImg from './images/shimla_ridge.jpg';
+
+// Stay button images 
+import LuxuryStayImg from './images/luxury_hotel.jpg';
+import BoutiqueHotelsImg from './images/boutique_hotel.jpeg';
+import NatureHotelsImg from './images/nature_hotel.jpeg';
+
+// Transport button image
+import HimanchalTransportImg from './images/himanchal_transport.jpg';
+
+//Experience button images
+import HimanchalCulturalImg from './images/himanchal_culture.jpeg';
+import LocalCuisinesImg from './images/local_cuisines.jpeg';
+import AdventureImg from './images/paragliding_hp.jpg';
+
 const NAV_ITEMS = [
   {
     title: "Explore",
@@ -29,18 +47,18 @@ const NAV_ITEMS = [
       },
     ],
     featuredCard: {
-      image: "#",
+      image: SpitiyVellyImg,
       title: "Explore Spiti Valley",
       cta: "Plan Your Journey",
     },
     cards: [
       {
-        image: "#",
+        image: ManaliRetreatImg,
         title: "Manali Retreat",
         subtitle: "Snow-capped mountains",
       },
       {
-        image: "#",
+        image: ShimlaRidgeImg,
         title: "Shimla Ridge",
         subtitle: "Colonial heritage",
       },
@@ -59,18 +77,18 @@ const NAV_ITEMS = [
       },
     ],
     featuredCard: {
-      image: "#",
+      image: LuxuryStayImg,
       title: "Luxury Stays",
       cta: "Book Now",
     },
     cards: [
       {
-        image: "#",
+        image: BoutiqueHotelsImg,
         title: "Boutique Hotels",
         subtitle: "Curated experiences",
       },
       {
-        image: "#",
+        image: NatureHotelsImg,
         title: "Nature Resorts",
         subtitle: "Disconnect & relax",
       },
@@ -88,7 +106,7 @@ const NAV_ITEMS = [
       },
     ],
     featuredCard: {
-      image: "#",
+      image: HimanchalTransportImg,
       title: "Scenic Drives",
       cta: "Explore Routes",
     },
@@ -107,18 +125,18 @@ const NAV_ITEMS = [
       },
     ],
     featuredCard: {
-      image: "#",
+      image: HimanchalCulturalImg,
       title: "Cultural Festivals",
       cta: "Experience Now",
     },
     cards: [
       {
-        image: "#",
+        image: LocalCuisinesImg,
         title: "Local Cuisines",
         subtitle: "Authentic flavors",
       },
       {
-        image: "#",
+        image: AdventureImg,
         title: "Adventure",
         subtitle: "Thrilling activities",
       },
