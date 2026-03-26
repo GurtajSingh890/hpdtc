@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram, Heart, MessageCircle } from 'lucide-react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import ManaliImg from './images/manali.jpg';
 
 const posts = [
   {
@@ -27,7 +28,7 @@ const posts = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1605649487212-4d4ce3e314f9?q=80&w=2940&auto=format&fit=crop',
+    image: ManaliImg,
     likes: '3.1k',
     comments: 210,
     author: '@manali_vibes'

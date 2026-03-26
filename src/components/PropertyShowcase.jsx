@@ -12,7 +12,7 @@ const properties = [
     rating: 4.8,
     reviews: 1240,
     price: '₹4,500',
-    image: '#',
+    image: 'home_hotel_img/kunzam_hotel.jpeg',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const properties = [
     rating: 4.9,
     reviews: 890,
     price: '₹6,200',
-    image: '#',
+    image: 'home_hotel_img/peterhoff_hotel.jpeg',
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const properties = [
     rating: 4.7,
     reviews: 560,
     price: '₹3,800',
-    image: '#',
+    image: 'home_hotel_img/bhagsu_hotel.jpeg',
   },
 ];
 

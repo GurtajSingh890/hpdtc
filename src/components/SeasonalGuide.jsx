@@ -6,6 +6,7 @@ import { Container, Row, Col, Badge } from "react-bootstrap";
 import ParaBirBillingImg from './images/para in bir billing.jpg';
 import SpitiVellyImg from './images/spitiy velly.jpg';
 import ManaliImg from './images/manali.jpg';
+import DharamshalaImg from './images/dharamshala.jpg';
 
 // ─── Season Data ──────────────────────────────────────────────────────────────
 const SEASONS = [
@@ -36,7 +37,7 @@ const SEASONS = [
     featuredDestination: {
       name: "Dharamshala",
       tagline: "Misty tea gardens, rain-washed monasteries, and Himalayan spirituality.",
-      heroImage: "#",
+      heroImage: DharamshalaImg,
       keyActivity: "Tea garden walks & meditation retreats",
       bestTimeToGo: "July to early September",
     },
