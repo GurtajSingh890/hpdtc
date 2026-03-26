@@ -50,17 +50,20 @@ const NAV_ITEMS = [
       image: SpitiyVellyImg,
       title: "Explore Spiti Valley",
       cta: "Plan Your Journey",
+      link: "/plan-your-trip",
     },
     cards: [
       {
         image: ManaliRetreatImg,
         title: "Manali Retreat",
         subtitle: "Snow-capped mountains",
+        link: "/plan-your-trip",
       },
       {
         image: ShimlaRidgeImg,
         title: "Shimla Ridge",
         subtitle: "Colonial heritage",
+        link: "/plan-your-trip",
       },
     ],
   },
@@ -80,17 +83,20 @@ const NAV_ITEMS = [
       image: LuxuryStayImg,
       title: "Luxury Stays",
       cta: "Book Now",
+      link: "/hotel-booking",
     },
     cards: [
       {
         image: BoutiqueHotelsImg,
         title: "Boutique Hotels",
         subtitle: "Curated experiences",
+        link: "/hotel-booking",
       },
       {
         image: NatureHotelsImg,
         title: "Nature Resorts",
         subtitle: "Disconnect & relax",
+        link: "/hotel-booking",
       },
     ],
   },
@@ -109,6 +115,7 @@ const NAV_ITEMS = [
       image: HimanchalTransportImg,
       title: "Scenic Drives",
       cta: "Explore Routes",
+      link: "/bus-booking",
     },
     cards: [],
   },
@@ -128,17 +135,20 @@ const NAV_ITEMS = [
       image: HimanchalCulturalImg,
       title: "Cultural Festivals",
       cta: "Experience Now",
+      link: "/events",
     },
     cards: [
       {
         image: LocalCuisinesImg,
         title: "Local Cuisines",
         subtitle: "Authentic flavors",
+        link: "/cuisines",
       },
       {
         image: AdventureImg,
         title: "Adventure",
         subtitle: "Thrilling activities",
+        link: "/adventure",
       },
     ],
   },
@@ -188,54 +198,58 @@ const NAV_ITEMS = [
   },
 ];
 
-const MegaMenuCard = ({ image, title, subtitle }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 15 },
-      visible: { opacity: 1, y: 0 },
-    }}
-    className="group relative overflow-hidden rounded-2xl cursor-pointer aspect-video md:aspect-[4/3] shadow-sm hover:shadow-lg transition-all duration-300 h-full"
-  >
-    <img
-      src={image}
-      alt={title}
-      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-[#002060]/90 via-[#002060]/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-    <div className="absolute bottom-0 left-0 p-5">
-      <h4 className="text-white font-bold text-lg leading-tight group-hover:text-[#FF5A2A] transition-colors duration-300">
-        {title}
-      </h4>
-      {subtitle && <p className="text-white/80 text-sm mt-1">{subtitle}</p>}
-    </div>
-  </motion.div>
-);
-
-const FeaturedCard = ({ image, title, cta }) => (
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, y: 15 },
-      visible: { opacity: 1, y: 0 },
-    }}
-    className="group relative overflow-hidden rounded-2xl cursor-pointer h-full min-h-[180px] shadow-sm hover:shadow-xl transition-all duration-300"
-  >
-    <img
-      src={image}
-      alt={title}
-      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-[#002060]/90 via-[#002060]/20 to-transparent" />
-    <div className="absolute bottom-0 left-0 p-6 w-full">
-      <h3 className="text-white font-extrabold text-2xl mb-2 group-hover:text-[#FF5A2A] transition-colors">
-        {title}
-      </h3>
-      <div className="flex items-center text-white font-semibold text-sm group-hover:text-[#FF5A2A] transition-colors">
-        {cta}{" "}
-        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+const MegaMenuCard = ({ image, title, subtitle, link, onClick }) => {
+  const content = (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 15 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="group relative overflow-hidden rounded-2xl cursor-pointer aspect-video md:aspect-[4/3] shadow-sm hover:shadow-lg transition-all duration-300 h-full"
+    >
+      <img loading="lazy" src={image}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#002060]/90 via-[#002060]/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+      <div className="absolute bottom-0 left-0 p-5">
+        <h4 className="text-white font-bold text-lg leading-tight group-hover:text-[#FF5A2A] transition-colors duration-300">
+          {title}
+        </h4>
+        {subtitle && <p className="text-white/80 text-sm mt-1">{subtitle}</p>}
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+  return link ? <Link to={link} className="block h-full" onClick={onClick}>{content}</Link> : content;
+};
+
+const FeaturedCard = ({ image, title, cta, link, onClick }) => {
+  const content = (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 15 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="group relative overflow-hidden rounded-2xl cursor-pointer h-full min-h-[180px] shadow-sm hover:shadow-xl transition-all duration-300"
+    >
+      <img loading="lazy" src={image}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#002060]/90 via-[#002060]/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 p-6 w-full">
+        <h3 className="text-white font-extrabold text-2xl mb-2 group-hover:text-[#FF5A2A] transition-colors">
+          {title}
+        </h3>
+        <div className="flex items-center text-white font-semibold text-sm group-hover:text-[#FF5A2A] transition-colors">
+          {cta}{" "}
+          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        </div>
+      </div>
+    </motion.div>
+  );
+  return link ? <Link to={link} className="block h-full" onClick={onClick}>{content}</Link> : content;
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -372,7 +386,7 @@ const Navbar = () => {
                 className="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ease-in-out hover:bg-black/5 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,0,0,0.3)] focus:outline-none overflow-hidden border-0 p-0 bg-transparent"
                 style={{ borderRadius: '50%' }}
                 >
-                <img src="/hp-logo.png" alt="HP Logo" className="w-8 h-8 object-contain group-hover:scale-110 transition-transform drop-shadow-sm" />
+                <img loading="lazy" src="/hp-logo.png" alt="HP Logo" className="w-8 h-8 object-contain group-hover:scale-110 transition-transform drop-shadow-sm" />
               </button>
               <LanguageSelector isMobile={false} />
               <button 
@@ -540,7 +554,10 @@ const Navbar = () => {
                                     : "col-span-2"
                                 }
                               >
-                                <FeaturedCard {...item.featuredCard} />
+                                <FeaturedCard
+                                  {...item.featuredCard}
+                                  onClick={() => setActiveDropdown(null)}
+                                />
                               </div>
                             )}
 
@@ -548,7 +565,11 @@ const Navbar = () => {
                             {item.cards?.length > 0 && (
                               <div className="flex flex-col gap-5 justify-between">
                                 {item.cards.map((card, idx) => (
-                                  <MegaMenuCard key={idx} {...card} />
+                                  <MegaMenuCard
+                                    key={idx}
+                                    {...card}
+                                    onClick={() => setActiveDropdown(null)}
+                                  />
                                 ))}
                               </div>
                             )}
@@ -751,7 +772,7 @@ const Navbar = () => {
                 }
               }}
               className="flex flex-col items-center gap-1 p-2 hover:text-[#FF5A2A] transition-colors group">
-              <img src="/hp-logo.png" alt="HP Logo" className="w-9 h-9 object-contain group-hover:-translate-y-1 transition-transform" />
+              <img loading="lazy" src="/hp-logo.png" alt="HP Logo" className="w-9 h-9 object-contain group-hover:-translate-y-1 transition-transform" />
               <span className="text-xs font-semibold">Locations</span>
             </button>
             <button 

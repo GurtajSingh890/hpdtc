@@ -77,8 +77,7 @@ export default function PlacesToGo() {
                 className="position-relative overflow-hidden rounded-4 cursor-pointer flex-grow-1 group w-100"
                 style={{ minHeight: '250px' }}
               >
-                <img
-                  src={place.image}
+                <img loading="lazy" src={place.image}
                   alt={place.name}
                   className="w-100 h-100 object-cover transition-transform duration-700 group-hover-scale"
                   style={{ transition: 'transform 0.7s ease' }}

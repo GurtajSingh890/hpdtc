@@ -76,8 +76,7 @@ export default function SocialProof() {
                 className="position-relative overflow-hidden rounded-3 cursor-pointer group"
                 style={{ aspectRatio: '1/1' }}
               >
-                <img 
-                  src={post.image} 
+                <img loading="lazy" src={post.image} 
                   alt={`Instagram post by ${post.author}`} 
                   className="w-100 h-100 object-cover transition-transform duration-500 group-hover-scale"
                   style={{ transition: 'transform 0.5s ease' }}

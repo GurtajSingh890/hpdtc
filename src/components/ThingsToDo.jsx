@@ -96,8 +96,7 @@ export default function ThingsToDo() {
                     className="position-relative rounded-4 overflow-hidden cursor-pointer group"
                     style={{ height: '320px' }}
                   >
-                    <img 
-                      src={activity.image} 
+                    <img loading="lazy" src={activity.image} 
                       alt={activity.title} 
                       className="w-100 h-100 object-cover transition-transform duration-700"
                       style={{ transition: 'transform 0.7s ease' }}

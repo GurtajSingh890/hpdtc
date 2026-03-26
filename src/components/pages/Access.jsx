@@ -255,8 +255,7 @@ const Access = () => {
             <Row className="g-5 align-items-center">
               {/* Image */}
               <Col lg={5} className={activeTab === 'rail' ? 'order-lg-2' : ''}>
-                <motion.img
-                  src={active.img}
+                <motion.img loading="lazy" src={active.img}
                   alt={active.imgAlt}
                   className="img-fluid rounded-4 w-100"
                   style={{ objectFit: 'cover', maxHeight: '420px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}

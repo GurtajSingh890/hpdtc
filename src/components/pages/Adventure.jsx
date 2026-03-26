@@ -233,8 +233,7 @@ export default function Adventure() {
 
                 {/* Image Container matching Events.jsx */}
                 <div className="relative h-72 overflow-hidden">
-                  <motion.img 
-                    whileHover={{ scale: 1.15 }}
+                  <motion.img loading="lazy" whileHover={{ scale: 1.15 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     src={item.imageUrl} 
                     alt={item.activityName} 

@@ -234,8 +234,7 @@ export default function Events() {
 
               {/* Image Container */}
               <div className="relative h-72 overflow-hidden">
-                <motion.img 
-                  whileHover={{ scale: 1.15 }}
+                <motion.img loading="lazy" whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   src={event.image.path} 
                   alt={event.image.altText} 

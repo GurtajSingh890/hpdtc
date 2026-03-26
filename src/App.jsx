@@ -38,11 +38,26 @@ import PhotoGallery from "./components/pages/PhotoGallery";
 import ScreenSaver from "./components/pages/ScreenSaver";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, key } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // 1. Temporarily disable the global 'smooth' scroll CSS behavior
+    const originalStyle = window.getComputedStyle(document.documentElement).scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+
+    // 2. Use a small timeout (50ms) to ensure the dropdown exit animation 
+    // and body scroll lock have been processed by the browser.
+    const scrollTimeout = setTimeout(() => {
+      window.scrollTo(0, 0);
+      
+      // 3. Restore global scroll behavior after a brief moment
+      setTimeout(() => {
+        document.documentElement.style.scrollBehavior = originalStyle;
+      }, 50);
+    }, 50);
+
+    return () => clearTimeout(scrollTimeout);
+  }, [pathname, key]);
 
   return null;
 }

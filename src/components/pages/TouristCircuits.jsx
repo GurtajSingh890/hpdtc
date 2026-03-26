@@ -77,8 +77,7 @@ const TouristCircuits = () => {
                 <Card className="border-0 shadow-sm overflow-hidden rounded-4 group">
                   <Row className="g-0">
                     <Col md={5} className="overflow-hidden">
-                      <motion.img 
-                        src={circuit.image} 
+                      <motion.img loading="lazy" src={circuit.image} 
                         alt={circuit.title}
                         className="h-100 w-100 object-cover transition-all duration-700 group-hover:scale-110"
                         style={{ minHeight: '350px' }}

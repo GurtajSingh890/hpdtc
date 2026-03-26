@@ -161,8 +161,7 @@ export default function ScreenSaver() {
             >
               {/* Image Container */}
               <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 shadow-inner">
-                <motion.img 
-                  whileHover={{ scale: 1.08 }}
+                <motion.img loading="lazy" whileHover={{ scale: 1.08 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   src={item.imageUrl} 
                   alt={item.title} 

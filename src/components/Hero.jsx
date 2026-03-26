@@ -14,8 +14,7 @@ export default function Hero() {
     <MotionConfig transition={LAYOUT_SPRING}>
       <div className="position-relative vh-100 w-100 overflow-hidden d-flex">
         <div className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style={{ zIndex: 0 }}>
-          <motion.img
-            initial={{ scale: 1.0 }}
+          <motion.img loading="lazy" initial={{ scale: 1.0 }}
             animate={{ scale: 1.12 }}
             transition={{
               duration: 25,

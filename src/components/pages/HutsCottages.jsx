@@ -176,8 +176,7 @@ export default function HutsCottages() {
 
       {/* ── HERO ── */}
       <div className="relative h-[520px] mb-20 overflow-hidden">
-        <img
-          src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_400,q_auto,w_700/v1694259235/bbj/terz2rukpdvtg2cjzvc8.jpg"
+        <img loading="lazy" src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_400,q_auto,w_700/v1694259235/bbj/terz2rukpdvtg2cjzvc8.jpg"
           alt="Himachal Huts & Cottages"
           className="w-full h-full object-cover"
           style={{ objectPosition: 'center 60%' }}
@@ -338,8 +337,7 @@ export default function HutsCottages() {
                 >
                   {/* image */}
                   <div className="relative h-64 overflow-hidden">
-                    <motion.img
-                      src={item.image}
+                    <motion.img loading="lazy" src={item.image}
                       alt={item.name}
                       variants={{ hover: { scale: 1.1 } }}
                       transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1] }}
@@ -436,8 +434,7 @@ export default function HutsCottages() {
 
         {/* ── CTA BANNER ── */}
         <div className="mt-24 relative rounded-[40px] overflow-hidden group">
-          <img
-            src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=2000&auto=format&fit=crop"
+          <img loading="lazy" src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=2000&auto=format&fit=crop"
             alt="Himalayan peaks"
             className="w-full h-[420px] object-cover transition-transform duration-1000 group-hover:scale-105"
             style={{ objectPosition: 'center 40%' }}

@@ -77,8 +77,7 @@ export default function Hotels() {
 
       {/* ── Hero ── */}
       <div className="relative mb-16 overflow-hidden" style={{ height: 420, borderRadius: '0 0 40px 40px' }}>
-        <img
-          src="https://www.incredibleindia.gov.in/content/dam/incredible-india/images/trips/himachal-pradesh/shimla/magnificent-tour-to-himachal-9-days-trip/kyelang-village-himachal-pradesh-tri-iter-day4.jpg"
+        <img loading="lazy" src="https://www.incredibleindia.gov.in/content/dam/incredible-india/images/trips/himachal-pradesh/shimla/magnificent-tour-to-himachal-9-days-trip/kyelang-village-himachal-pradesh-tri-iter-day4.jpg"
           alt="Luxury Hotel in Himachal"
           className="w-full h-full object-cover"
         />
@@ -213,8 +212,7 @@ export default function Hotels() {
             >
               {/* Image */}
               <div style={{ position: 'relative', height: 230, overflow: 'hidden' }}>
-                <motion.img
-                  src={hotel.image}
+                <motion.img loading="lazy" src={hotel.image}
                   alt={hotel.name}
                   variants={{ hover: { scale: 1.08 } }}
                   transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1] }}

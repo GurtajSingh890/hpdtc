@@ -198,8 +198,7 @@ export default function Cuisines() {
 
               {/* Image Container */}
               <div className="relative h-72 overflow-hidden">
-                <motion.img 
-                  whileHover={{ scale: 1.15 }}
+                <motion.img loading="lazy" whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   src={cuisine.image.placeholderUrl} 
                   alt={cuisine.image.altText} 

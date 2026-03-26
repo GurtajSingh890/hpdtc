@@ -47,8 +47,7 @@ export default function Story() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="position-absolute top-0 end-0 w-75 h-75 rounded-4 overflow-hidden shadow-lg"
               >
-                <img
-                  src={HimachaliCultureImg}
+                <img loading="lazy" src={HimachaliCultureImg}
                   alt="Himachali Culture"
                   className="w-100 h-100 object-cover"
                   referrerPolicy="no-referrer"
@@ -61,8 +60,7 @@ export default function Story() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="position-absolute bottom-0 start-0 w-75 h-75 rounded-4 overflow-hidden shadow-lg border border-4 border-white"
               >
-                <img
-                  src={SpitiMonasteryImg}
+                <img loading="lazy" src={SpitiMonasteryImg}
                   alt="Monastery in Spiti"
                   className="w-100 h-100 object-cover"
                   referrerPolicy="no-referrer"

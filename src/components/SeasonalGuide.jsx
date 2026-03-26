@@ -207,8 +207,7 @@ function FeaturedCard({ season }) {
           style={{ background: season.bgGradient }}
         />
         {/* Actual image — sits on top of the gradient */}
-        <img
-          src={dest.heroImage}
+        <img loading="lazy" src={dest.heroImage}
           alt={dest.name}
           className="position-absolute top-0 start-0 w-100 h-100"
           style={{ objectFit: "cover", zIndex: 1 }}

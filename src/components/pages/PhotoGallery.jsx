@@ -138,8 +138,7 @@ export default function PhotoGallery() {
                       <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
                     </div>
                     
-                    <motion.img 
-                      whileHover={{ scale: 1.08 }}
+                    <motion.img loading="lazy" whileHover={{ scale: 1.08 }}
                       transition={{ duration: 0.8, ease: "easeOut" }}
                       src={imgUrl} 
                       alt={`${circuit.title} Image ${imgIndex + 1}`}

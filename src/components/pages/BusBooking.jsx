@@ -560,8 +560,7 @@ export default function BusBooking() {
 
       {/*Hero */}
       <section className="relative h-[420px] md:h-[480px] flex items-center justify-center overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&auto=format&fit=crop&q=80"
+        <img loading="lazy" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&auto=format&fit=crop&q=80"
           alt="Himachal mountains"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -776,8 +775,7 @@ export default function BusBooking() {
               >
                 {/* Image wrapper — own overflow-hidden so card's framer scale doesn't break clipping */}
                 <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <img
-                    src={route.image}
+                  <img loading="lazy" src={route.image}
                     alt={`${route.from} to ${route.to}`}
                     className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
                   />

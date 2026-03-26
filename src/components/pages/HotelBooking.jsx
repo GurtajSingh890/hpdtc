@@ -176,7 +176,7 @@ export default function HotelBooking() {
                   className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100 group cursor-pointer"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl flex items-center gap-1 shadow-lg">
                       <Star className="w-3.5 h-3.5 text-yellow-500 fill-current" />
                       <span className="text-xs font-black">{hotel.rating}</span>

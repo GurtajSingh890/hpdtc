@@ -180,8 +180,7 @@ export default function Awards() {
                     transition={{ type: "spring", stiffness: 100 }}
                     className="relative rounded-[2rem] overflow-hidden aspect-[4/3] shadow-lg group"
                   >
-                    <img 
-                      src={award.placeholderUrl} 
+                    <img loading="lazy" src={award.placeholderUrl} 
                       alt={award.awardTitle}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                     />
