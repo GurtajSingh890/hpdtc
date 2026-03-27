@@ -76,12 +76,12 @@ export default function App() {
             <main>
               <Hero />
               <HorizontalCategories />
+              <ItineraryBuilder />
               <Story />
               <PlacesToGo />
               <SeasonalGuide />
               <InteractiveMap />
               <PropertyShowcase />
-              <ItineraryBuilder />
               <SocialProof />
             </main>
           }
