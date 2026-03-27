@@ -2,7 +2,7 @@ import React from "react";
 import { motion, MotionConfig } from "motion/react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import HimachalHero from './images/Gallery.jpg';
+import HimachalHero from './images/new_hero.png';
 
 
 const LAYOUT_SPRING = { type: "spring", stiffness: 200, damping: 28 };
@@ -28,10 +28,10 @@ export default function Hero() {
             referrerPolicy="no-referrer"
           />
           <div
-            className="position-absolute top-0 start-0 w-100 h-100"
+            className="position-absolute top-0 start-0 w-100 h-100 pointer-events-none"
             style={{
               background:
-                "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.5) 100%)",
+                "linear-gradient(to top, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.6) 50%, rgba(15, 23, 42, 0) 100%)",
             }}
           />
         </div>
