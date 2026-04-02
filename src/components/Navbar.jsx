@@ -353,7 +353,7 @@ const Navbar = () => {
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#002060] to-[#003B99] shadow-md flex items-center justify-center transform group-hover:scale-105 transition-all duration-300">
                 <span className="text-white font-bold text-lg">HP</span>
               </div>
-              <span className="font-extrabold text-[1.3rem] hidden sm:block tracking-tight text-[#002060] drop-shadow-sm group-hover:text-[#FF5A2A] transition-colors duration-300">
+              <span className="font-extrabold text-[1.3rem] hidden sm:block tracking-tight text-[#FF5A2A] drop-shadow-sm group-hover:text-[#FF5A2A] transition-colors duration-300">
                 HPTDC
               </span>
             </Link>
@@ -372,8 +372,8 @@ const Navbar = () => {
                       className={clsx(
                         "relative flex items-center gap-1 font-semibold uppercase tracking-wider px-3 py-2 text-sm whitespace-nowrap transition-colors focus:outline-none rounded-full cursor-pointer group/nav",
                         activeDropdown === item.title
-                          ? "text-white"
-                          : "text-white/80 hover:text-white",
+                          ? "text-h-saffron"
+                          : "text-white/80 hover-text-h-saffron"
                       )}
                     >
                       {item.title}

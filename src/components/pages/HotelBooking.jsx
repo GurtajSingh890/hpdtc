@@ -30,9 +30,9 @@ export default function HotelBooking() {
   });
 
   return (
-    <div className="pt-24 pb-16 bg-[#FDFEFE] min-h-screen font-sans text-[#1A1A1A]">
+    <div className="pb-16 bg-[#FDFEFE] min-h-screen font-sans text-[#1A1A1A]">
       {/* Hero Section */}
-      <div className="relative h-[300px] mb-12 flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-[50vh] pt-32 pb-16 mb-12 flex items-center justify-center overflow-hidden bg-cover bg-center">
         <div className="absolute inset-0 bg-[#002060]">
           <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#FF5A2A] rounded-full blur-[120px] opacity-20"></div>

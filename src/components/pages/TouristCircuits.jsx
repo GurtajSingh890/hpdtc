@@ -44,9 +44,9 @@ const TouristCircuits = () => {
   ];
 
   return (
-    <div className="tourist-circuits bg-white pt-5">
+    <div className="tourist-circuits bg-white">
       {/* Page Header */}
-      <section className="bg-h-dark text-white py-5 mb-5 position-relative">
+      <section className="bg-h-dark text-white pt-32 pb-16 mb-5 position-relative min-h-[50vh] d-flex align-items-center bg-cover bg-center">
         <div className="position-absolute top-0 start-0 w-100 h-100 bg-h-blue opacity-25"></div>
         <Container className="position-relative z-1">
           <motion.div 
