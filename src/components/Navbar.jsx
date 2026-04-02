@@ -231,6 +231,7 @@ const MegaMenuCard = ({ image, title, subtitle, link, onClick }) => {
   );
 };
 
+
 const FeaturedCard = ({ image, title, cta, link, onClick }) => {
   const content = (
     <motion.div
@@ -327,22 +328,23 @@ const Navbar = () => {
       <header
         ref={navRef}
         className={clsx(
-          "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 font-sans",
+          "fixed top-4 left-0 right-0 z-[60] max-w-7xl mx-auto transition-all duration-500 font-sans rounded-2xl border border-white/20",
           // Base Glassmorphism Styles
-          "backdrop-blur-md border-b",
+          "backdrop-blur-md",
           isScrolled
-            ? "bg-white/80 shadow-lg py-2 border-white/20"
-            : "bg-white/90 shadow-sm py-3 border-transparent",
+            ? "bg-black/50 shadow-2xl py-2 w-[98%] xl:w-[95%]"
+            : "bg-black/30 shadow-lg py-3 w-[95%] xl:w-[90%]",
         )}
         style={{
-          color: "#002060",
+          color: "#ffffff",
           // Adding a subtle saturation boost makes the colors behind the glass "pop"
           backdropFilter: "blur(12px) saturate(160%)",
           WebkitBackdropFilter: "blur(12px) saturate(160%)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex justify-between items-center relative z-50">
+        <div className="w-full relative">
+          <div className="flex items-center justify-between w-full px-6 relative z-50">
+            {/* Left Side: Logo */}
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -356,7 +358,8 @@ const Navbar = () => {
               </span>
             </Link>
 
-            <nav className="hidden lg:flex items-center space-x-3 xl:space-x-4 ml-4">
+            {/* Center Section: Primary Navigation Links */}
+            <nav className="hidden lg:flex flex-1 justify-center items-center  xl:gap-x-1 px-1">
               {NAV_ITEMS.map((item) => (
                 <div key={item.title} className="relative h-full">
                   <div className="flex items-center h-full pt-0.5 pb-0.5">
@@ -367,10 +370,10 @@ const Navbar = () => {
                         )
                       }
                       className={clsx(
-                        "relative flex items-center gap-1 font-semibold px-3 py-2 text-sm xl:text-[15px] transition-colors focus:outline-none rounded-full cursor-pointer group/nav",
+                        "relative flex items-center gap-1 font-semibold uppercase tracking-wider px-3 py-2 text-sm whitespace-nowrap transition-colors focus:outline-none rounded-full cursor-pointer group/nav",
                         activeDropdown === item.title
-                          ? "text-[#FF5A2A]"
-                          : "hover:text-[#FF5A2A]",
+                          ? "text-white"
+                          : "text-white/80 hover:text-white",
                       )}
                     >
                       {item.title}
@@ -383,10 +386,10 @@ const Navbar = () => {
                       {/* Premium Underline Animation */}
                       <span
                         className={clsx(
-                          "absolute bottom-1 left-1/2 w-0 h-0.5 bg-[#FF5A2A] transition-all duration-300 -translate-x-1/2 rounded-full",
+                          "absolute bottom-0 left-1/2 w-0 h-[2px] bg-white transition-all duration-300 -translate-x-1/2 rounded-full",
                           activeDropdown === item.title
-                            ? "w-[60%]"
-                            : "group-hover/nav:w-[60%]",
+                            ? "w-[80%]"
+                            : "group-hover/nav:w-[80%]",
                         )}
                       ></span>
                     </button>
@@ -395,7 +398,8 @@ const Navbar = () => {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center space-x-5 xl:space-x-6 ml-4">
+            {/* Right Side: Functional Icons */}
+            <div className="hidden lg:flex flex-shrink-0 items-center justify-end gap-3">
               <a
                 href="tel:112"
                 className="flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 text-white px-3.5 py-1.5 rounded-full font-bold shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:shadow-[0_0_20px_rgba(220,38,38,0.8)] transform hover:-translate-y-0.5 transition-all"
@@ -404,7 +408,7 @@ const Navbar = () => {
                 <span className="text-sm tracking-widest">SOS</span>
               </a>
 
-              <div className="hidden lg:flex items-center gap-2 border-l border-gray-200 pl-4">
+              <div className="hidden lg:flex items-center gap-0.5 border-l border-gray-200 pl-4">
                 <button
                   onClick={() => {
                     if (window.location.pathname !== "/") {
@@ -421,20 +425,17 @@ const Navbar = () => {
                   className="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ease-in-out hover:bg-black/5 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,0,0,0.3)] focus:outline-none overflow-hidden border-0 p-0 bg-transparent"
                   style={{ borderRadius: "50%" }}
                 >
-                  <img
-                    loading="lazy"
-                    src="/hp-logo.png"
-                    alt="HP Logo"
-                    className="w-8 h-8 object-contain group-hover:scale-110 transition-transform drop-shadow-sm"
-                  />
+                  <MapPin className="w-5 h-5" />
                 </button>
-                <LanguageSelector isMobile={false} />
+                <div className="text-white/80 hover:text-white transition-colors">
+                  <LanguageSelector isMobile={false} />
+                </div>
                 <button
                   onClick={() => setIsSearchOpen(true)}
                   className="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ease-in-out hover:bg-black/5 hover:scale-110 hover:shadow-[0_0_10px_rgba(0,0,0,0.3)] focus:outline-none overflow-hidden border-0 p-0 bg-transparent"
                   style={{ borderRadius: "50%" }}
                 >
-                  <Search className="w-8 h-8" />
+                  <Search className="w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -442,19 +443,21 @@ const Navbar = () => {
             <div className="flex lg:hidden items-center space-x-4">
               <a
                 href="tel:112"
-                className="flex items-center justify-center bg-gradient-to-r from-red-600 to-red-500 text-white w-8 h-8 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.4)] animate-pulse"
+                className="flex items-center justify-center bg-gradient-to-r from-red-600 to-red-500 text-white w-8 h-8 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.4)] animate-pulse border border-white/20"
               >
                 <Phone className="w-4 h-4 fill-white flex-shrink-0" />
               </a>
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="text-[#002060] p-1.5 hover:bg-gray-50 rounded-full transition-colors"
+                className="text-white p-1.5 hover:bg-white/10 rounded-full transition-colors"
               >
                 <Search className="w-5 h-5" />
               </button>
-              <LanguageSelector isMobile={true} />
+              <div className="text-white">
+                <LanguageSelector isMobile={true} />
+              </div>
               <button
-                className="text-[#002060] p-1.5 hover:bg-gray-50 rounded-full transition-colors focus:outline-none"
+                className="text-white p-1.5 hover:bg-white/10 rounded-full transition-colors focus:outline-none"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <Menu className="w-6 h-6" />
@@ -468,17 +471,27 @@ const Navbar = () => {
           <AnimatePresence>
             {activeDropdown && (
               <motion.div
-                key="mega-menu"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
-                className="w-full max-w-6xl mt-0 pointer-events-auto relative"
-              >
-                {/* Bridge to prevent hover gap issues */}
-                <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent -z-10"></div>
+        key="mega-menu"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className="w-full max-w-6xl mt-2 pointer-events-auto relative"
+        style={{
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          backdropFilter: "blur(12px) saturate(160%)",
+          WebkitBackdropFilter: "blur(12px) saturate(160%)",
+          borderRadius: "1.5rem", 
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          boxShadow: "0 30px 60px -15px rgba(0,0,0,0.5)",
+          overflow: "hidden"
+        }}
+      >
+        {/* Bridge to prevent hover gap issues */}
+        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent -z-10"></div>
 
-                <div className="bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden max-h-[calc(100vh-5rem)] overflow-y-auto">
+        {/* This inner div handles the scrolling while the outer motion.div handles the blur */}
+        <div className="max-h-[calc(100vh-6rem)] overflow-y-auto">
                   {NAV_ITEMS.map((item) => {
                     if (item.title !== activeDropdown) return null;
                     const hasCards =
@@ -560,17 +573,17 @@ const Navbar = () => {
                                                                                 ? "/screen-saver"
                                                                                 : "#"
                                       }
-                                      className="relative block p-4 rounded-2xl !no-underline border-2 border-gray-400 bg-white transition-all duration-300 ease-out group/link hover:-translate-y-[4px] hover:scale-[1.03] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.50)] hover:border-[#1E3A8A]"
+                                      className="relative block p-4 rounded-2xl !no-underline border-2 border-gray-400 bg-white/5 transition-all duration-300 ease-out group/link hover:-translate-y-[4px] hover:scale-[1.03] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.50)] hover:border-[#1E3A8A]"
                                     >
                                       <div className="absolute inset-0 bg-gradient-to-r from-[#F97316]/5 to-transparent opacity-0 group-hover/link:opacity-100 transition duration-300 rounded-2xl"></div>
 
                                       <div className="relative z-10">
-                                        <div className="font-bold text-[15.5px] text-[#002060] group-hover/link:text-[#F97316] transition-colors flex items-center justify-between">
+                                        <div className="font-bold text-[15.5px] text-[#fff] group-hover/link:text-[#F97316] transition-colors flex items-center justify-between">
                                           {link.name}
                                           <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-1 group-hover/link:scale-110 transition-all duration-300" />
                                         </div>
 
-                                        <div className="text-gray-600 text-[13.5px] leading-relaxed mt-1 pr-6">
+                                        <div className="text-white text-[13.5px] leading-relaxed mt-1 pr-6">
                                           {link.desc}
                                         </div>
                                       </div>
