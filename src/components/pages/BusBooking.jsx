@@ -556,17 +556,17 @@ export default function BusBooking() {
   };
 
   return (
-    <div className="pt-[72px] min-h-screen bg-[#FAFCFF] font-sans text-[#1A1A1A]">
+    <div className="min-h-screen bg-[#FAFCFF] font-sans text-[#1A1A1A]">
 
       {/*Hero */}
-      <section className="relative h-[420px] md:h-[480px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-cover bg-center">
         <img loading="lazy" src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&auto=format&fit=crop&q=80"
           alt="Himachal mountains"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#002060]/75 via-[#002060]/60 to-[#002060]/75" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#002060]/75 via-[#002060]/60 to-[#002060]/75" />
 
-        <div className="relative z-10 text-center px-4 w-full max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-4 w-full max-w-5xl mx-auto pt-32 pb-16">
           <motion.div initial={{ opacity: 0, y: -15 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-5">
               <Bus className="w-4 h-4 text-[#FF5A2A]" />

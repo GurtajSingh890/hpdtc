@@ -172,18 +172,18 @@ export default function HutsCottages() {
     setWishlist((prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]);
 
   return (
-    <div className="pt-24 pb-20 bg-[#f5f7fb] min-h-screen font-sans text-gray-800">
+    <div className="pb-20 bg-[#f5f7fb] min-h-screen font-sans text-gray-800">
 
       {/* ── HERO ── */}
-      <div className="relative h-[520px] mb-20 overflow-hidden">
+      <div className="relative min-h-[60vh] pb-16 mb-20 overflow-hidden bg-cover bg-center">
         <img loading="lazy" src="https://res.cloudinary.com/dyiffrkzh/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_400,q_auto,w_700/v1694259235/bbj/terz2rukpdvtg2cjzvc8.jpg"
           alt="Himachal Huts & Cottages"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: 'center 60%' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#001233]/95 via-[#001233]/55 to-transparent" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#001233]/95 via-[#001233]/55 to-transparent" />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+        <div className="relative z-10 flex flex-col items-center justify-center px-4 pt-32 h-full text-center min-h-[60vh]">
           <motion.div
             initial={{ opacity: 0, y: -14 }}
             animate={{ opacity: 1, y: 0 }}

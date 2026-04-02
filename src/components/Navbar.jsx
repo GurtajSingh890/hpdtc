@@ -325,23 +325,26 @@ const Navbar = () => {
 
   return (
     <>
-      <header
-        ref={navRef}
-        className={clsx(
-          "fixed top-4 left-0 right-0 z-[60] max-w-7xl mx-auto transition-all duration-500 font-sans rounded-2xl border border-white/20",
-          // Base Glassmorphism Styles
-          "backdrop-blur-md",
-          isScrolled
-            ? "bg-black/50 shadow-2xl py-2 w-[98%] xl:w-[95%]"
-            : "bg-black/30 shadow-lg py-3 w-[95%] xl:w-[90%]",
-        )}
-        style={{
-          color: "#ffffff",
-          // Adding a subtle saturation boost makes the colors behind the glass "pop"
-          backdropFilter: "blur(12px) saturate(160%)",
-          WebkitBackdropFilter: "blur(12px) saturate(160%)",
-        }}
+      <div 
+        ref={navRef} 
+        className="fixed top-4 left-0 right-0 z-[60] flex flex-col items-center pointer-events-none"
       >
+        <header
+          className={clsx(
+            "pointer-events-auto relative max-w-7xl transition-all duration-500 font-sans rounded-2xl border border-white/20",
+            // Base Glassmorphism Styles
+            "backdrop-blur-md",
+            isScrolled
+              ? "bg-black/50 shadow-2xl py-2 w-[98%] xl:w-[95%]"
+              : "bg-black/30 shadow-lg py-3 w-[95%] xl:w-[90%]",
+          )}
+          style={{
+            color: "#ffffff",
+            // Adding a subtle saturation boost makes the colors behind the glass "pop"
+            backdropFilter: "blur(12px) saturate(160%)",
+            WebkitBackdropFilter: "blur(12px) saturate(160%)",
+          }}
+        >
         <div className="w-full relative">
           <div className="flex items-center justify-between w-full px-6 relative z-50">
             {/* Left Side: Logo */}
@@ -353,7 +356,7 @@ const Navbar = () => {
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#002060] to-[#003B99] shadow-md flex items-center justify-center transform group-hover:scale-105 transition-all duration-300">
                 <span className="text-white font-bold text-lg">HP</span>
               </div>
-              <span className="font-extrabold text-[1.3rem] hidden sm:block tracking-tight text-[#002060] drop-shadow-sm group-hover:text-[#FF5A2A] transition-colors duration-300">
+              <span className="font-extrabold text-[1.3rem] hidden sm:block tracking-tight text-[#FF5A2A] drop-shadow-sm group-hover:text-[#FF5A2A] transition-colors duration-300">
                 HPTDC
               </span>
             </Link>
@@ -372,8 +375,8 @@ const Navbar = () => {
                       className={clsx(
                         "relative flex items-center gap-1 font-semibold uppercase tracking-wider px-3 py-2 text-sm whitespace-nowrap transition-colors focus:outline-none rounded-full cursor-pointer group/nav",
                         activeDropdown === item.title
-                          ? "text-white"
-                          : "text-white/80 hover:text-white",
+                          ? "text-h-saffron"
+                          : "text-white/80 hover-text-h-saffron"
                       )}
                     >
                       {item.title}
@@ -466,32 +469,29 @@ const Navbar = () => {
           </div>
         </div>
 
+        </header>
+
         {/* Global Mega Menu Container */}
-        <div className="absolute top-full left-0 w-full flex justify-center pointer-events-none px-4 sm:px-6 z-40">
+        <div className="w-full max-w-7xl flex justify-center pointer-events-none px-4 sm:px-6 z-40">
           <AnimatePresence>
             {activeDropdown && (
               <motion.div
-        key="mega-menu"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
-        className="w-full max-w-6xl mt-2 pointer-events-auto relative"
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.3)",
-          backdropFilter: "blur(12px) saturate(160%)",
-          WebkitBackdropFilter: "blur(12px) saturate(160%)",
-          borderRadius: "1.5rem", 
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          boxShadow: "0 30px 60px -15px rgba(0,0,0,0.5)",
-          overflow: "hidden"
-        }}
-      >
-        {/* Bridge to prevent hover gap issues */}
-        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent -z-10"></div>
+                key="mega-menu"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="w-full max-w-7xl mt-1 pointer-events-auto relative bg-black/40 border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
+                style={{
+                  backdropFilter: "blur(12px) saturate(160%)",
+                  WebkitBackdropFilter: "blur(12px) saturate(160%)",
+                }}
+              >
+                {/* Bridge to prevent hover gap issues */}
+                <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent -z-10"></div>
 
-        {/* This inner div handles the scrolling while the outer motion.div handles the blur */}
-        <div className="max-h-[calc(100vh-6rem)] overflow-y-auto">
+                {/* This inner div handles the scrolling while the outer motion.div handles the blur */}
+                <div className="max-h-[calc(100vh-6rem)] overflow-y-auto">
                   {NAV_ITEMS.map((item) => {
                     if (item.title !== activeDropdown) return null;
                     const hasCards =
@@ -500,7 +500,7 @@ const Navbar = () => {
                     return (
                       <div
                         key={item.title}
-                        className="p-6 flex flex-col lg:flex-row gap-8 min-h-[200px]"
+                        className="p-8 md:p-10 flex flex-col lg:flex-row gap-12 min-h-[200px]"
                       >
                         {/* LEFT SECTION (40% or 100%) - Navigation Links */}
                         <div
@@ -511,10 +511,10 @@ const Navbar = () => {
                         >
                           {item.columns.map((col, idx) => (
                             <div key={idx} className="w-full">
-                              <h4 className="font-bold text-[12px] tracking-[0.15em] uppercase text-gray-400 mb-5 px-3">
+                              <h4 className="font-bold text-[11px] tracking-[0.2em] uppercase text-white/50 mb-6 px-3">
                                 {col.heading}
                               </h4>
-                              <ul className="space-y-1">
+                              <ul className="space-y-2">
                                 {col.links.map((link) => (
                                   <li key={link.name}>
                                     <Link
@@ -573,17 +573,17 @@ const Navbar = () => {
                                                                                 ? "/screen-saver"
                                                                                 : "#"
                                       }
-                                      className="relative block p-4 rounded-2xl !no-underline border-2 border-gray-400 bg-white/5 transition-all duration-300 ease-out group/link hover:-translate-y-[4px] hover:scale-[1.03] hover:shadow-[0_12px_30px_-10px_rgba(0,0,0,0.50)] hover:border-[#1E3A8A]"
+                                      className="relative block p-4 rounded-xl !no-underline border border-white/10 bg-black/30 transition-all duration-300 ease-out group/link hover:-translate-y-[2px] hover:bg-black/40 hover:border-white/30 hover:shadow-[0_0_15px_rgba(0,0,0,0.05)]"
                                     >
-                                      <div className="absolute inset-0 bg-gradient-to-r from-[#F97316]/5 to-transparent opacity-0 group-hover/link:opacity-100 transition duration-300 rounded-2xl"></div>
+                                      <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover/link:opacity-100 transition duration-300 rounded-xl"></div>
 
                                       <div className="relative z-10">
-                                        <div className="font-bold text-[15.5px] text-[#fff] group-hover/link:text-[#F97316] transition-colors flex items-center justify-between">
+                                        <div className="font-bold text-[15px] text-white/90 group-hover/link:text-white transition-colors flex items-center justify-between">
                                           {link.name}
-                                          <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-1 group-hover/link:scale-110 transition-all duration-300" />
+                                          <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all duration-300" />
                                         </div>
 
-                                        <div className="text-white text-[13.5px] leading-relaxed mt-1 pr-6">
+                                        <div className="text-white/60 text-[13px] leading-relaxed mt-1 pr-6 group-hover/link:text-white/80 transition-colors">
                                           {link.desc}
                                         </div>
                                       </div>
@@ -605,7 +605,7 @@ const Navbar = () => {
                                 transition: { staggerChildren: 0.1 },
                               },
                             }}
-                            className="hidden lg:grid w-full lg:w-3/5 gap-5 grid-cols-2"
+                            className="hidden lg:grid w-full lg:w-3/5 gap-6 grid-cols-2"
                           >
                             {/* Featured Card */}
                             {item.featuredCard && (
@@ -625,7 +625,7 @@ const Navbar = () => {
 
                             {/* Smaller Cards */}
                             {item.cards?.length > 0 && (
-                              <div className="flex flex-col gap-5 justify-between">
+                              <div className="flex flex-col gap-6 justify-between">
                                 {item.cards.map((card, idx) => (
                                   <MegaMenuCard
                                     key={idx}
@@ -645,7 +645,7 @@ const Navbar = () => {
             )}
           </AnimatePresence>
         </div>
-      </header>
+      </div>
 
       {/* Search Overlay */}
       <AnimatePresence>

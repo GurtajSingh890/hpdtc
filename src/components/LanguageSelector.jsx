@@ -78,9 +78,7 @@ const LanguageSelector = ({ isMobile }) => {
 
   return (
     <div className="relative flex items-center justify-center z-[100]" ref={dropdownRef}>
-      {/* CRITICAL: We only want ONE of these on the whole page. 
-         If isMobile is false (Desktop), we render the hidden div.
-      */}
+
       {!isMobile && (
         <div 
           id={GOOGLE_ELEMENT_ID} 
@@ -100,7 +98,7 @@ const LanguageSelector = ({ isMobile }) => {
 
         aria-label="Select Language"
       >
-        <Globe className="w-8 h-8 text-[#002060] opacity-80" />
+        <Globe className="w-7 h-7 text-[#fff] opacity-80" />
       </button>
 
       <AnimatePresence>

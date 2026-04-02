@@ -73,17 +73,20 @@ const HOTELS = [
 
 export default function Hotels() {
   return (
-    <div className="pt-24 pb-20 min-h-screen" style={{ backgroundColor: '#f8f9fc', fontFamily: 'sans-serif' }}>
+    <div className="pb-20 min-h-screen" style={{ backgroundColor: '#f8f9fc', fontFamily: 'sans-serif' }}>
 
       {/* ── Hero ── */}
-      <div className="relative mb-16 overflow-hidden" style={{ height: 420, borderRadius: '0 0 40px 40px' }}>
+      <div className="relative mb-16 overflow-hidden min-h-[60vh] pb-12" style={{ borderRadius: '0 0 40px 40px' }}>
         <img loading="lazy" src="https://www.incredibleindia.gov.in/content/dam/incredible-india/images/trips/himachal-pradesh/shimla/magnificent-tour-to-himachal-9-days-trip/kyelang-village-himachal-pradesh-tri-iter-day4.jpg"
           alt="Luxury Hotel in Himachal"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover bg-cover bg-center"
         />
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center"
+          className="absolute inset-0 pointer-events-none"
           style={{ background: 'linear-gradient(135deg, rgba(0,32,96,0.92) 0%, rgba(0,32,96,0.50) 100%)' }}
+        ></div>
+        <div
+          className="relative z-10 flex flex-col items-center justify-center px-4 pt-32 h-full text-center min-h-[60vh]"
         >
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
