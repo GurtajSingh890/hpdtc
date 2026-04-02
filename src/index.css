@@ -108,13 +108,13 @@ html {
 
 /* Backdrop Blur */
 .backdrop-blur-sm {
-  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px) ;
   backdrop-filter: blur(4px);
 }
 
 .backdrop-blur-md {
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
 }
 
 /* Drop Shadow */
