@@ -98,7 +98,7 @@ const LanguageSelector = ({ isMobile }) => {
 
         aria-label="Select Language"
       >
-        <Globe className="w-7 h-7 text-[#fff] opacity-80" />
+        <Globe className="w-7 h-7 text-[#fff] opacity-80" strokeWidth={1.5} />
       </button>
 
       <AnimatePresence>

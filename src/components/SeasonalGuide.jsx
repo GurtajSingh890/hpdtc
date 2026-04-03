@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { Sun, Snowflake, Leaf, CloudRain, MapPin, ArrowRight, Clock } from "lucide-react";
 import { Container, Row, Col, Badge } from "react-bootstrap";
 
-import ParaBirBillingImg from './images/para in bir billing.jpg';
-import SpitiVellyImg from './images/spitiy velly.jpg';
-import ManaliImg from './images/manali.jpg';
-import DharamshalaImg from './images/dharamshala.jpg';
+import ParaBirBillingImg from './images/para-in-bir-billing.webp';
+import SpitiVellyImg from './images/spitiy-velly.webp';
+import ManaliImg from './images/manali.webp';
+import DharamshalaImg from './images/dharamshala.webp';
 
 // ─── Season Data ──────────────────────────────────────────────────────────────
 const SEASONS = [

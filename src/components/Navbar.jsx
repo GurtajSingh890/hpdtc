@@ -15,22 +15,22 @@ import { Link, useLocation } from "react-router-dom";
 import LanguageSelector from "./LanguageSelector";
 
 // Explore button images
-import SpitiyVellyImg from "./images/spitiy velly.jpg";
-import ManaliRetreatImg from "./images/manali_retreat.jpg";
-import ShimlaRidgeImg from "./images/shimla_ridge.jpg";
+import SpitiyVellyImg from "./images/spitiy-velly.webp";
+import ManaliRetreatImg from "./images/manali_retreat.webp";
+import ShimlaRidgeImg from "./images/shimla_ridge.webp";
 
 // Stay button images
-import LuxuryStayImg from "./images/luxury_hotel.jpg";
-import BoutiqueHotelsImg from "./images/boutique_hotel.jpeg";
-import NatureHotelsImg from "./images/nature_hotel.jpeg";
+import LuxuryStayImg from "./images/luxury_hotel.webp";
+import BoutiqueHotelsImg from "./images/boutique_hotel.webp";
+import NatureHotelsImg from "./images/nature_hotel.webp";
 
 // Transport button image
-import HimanchalTransportImg from "./images/himanchal_transport.jpg";
+import HimanchalTransportImg from "./images/himanchal_transport.webp";
 
 //Experience button images
-import HimanchalCulturalImg from "./images/himanchal_culture.jpeg";
-import LocalCuisinesImg from "./images/local_cuisines.jpeg";
-import AdventureImg from "./images/paragliding_hp.jpg";
+import HimanchalCulturalImg from "./images/himanchal_culture.webp";
+import LocalCuisinesImg from "./images/local_cuisines.webp";
+import AdventureImg from "./images/paragliding_hp.webp";
 
 const NAV_ITEMS = [
   {

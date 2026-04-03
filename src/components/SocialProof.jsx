@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram, Heart, MessageCircle } from 'lucide-react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import ManaliImg from './images/manali.jpg';
+import ManaliImg from './images/manali.webp';
 
 const posts = [
   {
