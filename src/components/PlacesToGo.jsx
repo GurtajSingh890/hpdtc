@@ -3,11 +3,11 @@ import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import ShimlaImg from './images/shimla.jpeg';
-import ManaliImg from './images/manali.jpg';
-import SpitiVellyImg from './images/spitiy velly.jpg';
-import KinnaurImg from './images/kinnaur.jpeg';
-import DharamshalaImg from './images/dharamshala.jpg';
+import ShimlaImg from './images/shimla.webp';
+import ManaliImg from './images/manali.webp';
+import SpitiVellyImg from './images/spitiy-velly.webp';
+import KinnaurImg from './images/kinnaur.webp';
+import DharamshalaImg from './images/dharamshala.webp';
 
 const places = [
   {

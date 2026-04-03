@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Container, Row, Col } from 'react-bootstrap';
-import HimachaliCultureImg from './images/Kullu-Dussehra( culture).jpeg';
-import SpitiMonasteryImg from './images/spitiy.jpg';
+import HimachaliCultureImg from './images/Kullu-Dussehra( culture).webp';
+import SpitiMonasteryImg from './images/spitiy.webp';
 
 export default function Story() {
   return (

@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Flame, Mountain, Leaf, Landmark, ArrowRight, Compass } from 'lucide-react';
 import { Container } from 'react-bootstrap';
-import BudhImg from './images/budh_mandir_card.jpeg';
-import RaulaneImg from './images/raulane_festival_card.jpeg';
+import BudhImg from './images/budh_mandir_card.webp';
+import RaulaneImg from './images/raulane_festival_card.webp';
 
 const CATEGORIES = [
   {

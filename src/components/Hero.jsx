@@ -2,7 +2,7 @@ import React from "react";
 import { motion, MotionConfig } from "motion/react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import HimachalHero from './images/akash-rawat.jpg';
+import HimachalHero from './images/_hero_3.webp';
 
 
 const LAYOUT_SPRING = { type: "spring", stiffness: 200, damping: 28 };
