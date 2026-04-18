@@ -51,7 +51,7 @@ const posts = [
 
 export default function SocialProof() {
   return (
-    <section className="py-5 bg-white overflow-hidden">
+    <section className="py-5 overflow-hidden">
       <Container className="py-5">
         <div className="text-center mb-5">
           <div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style={{ width: '48px', height: '48px', background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}>

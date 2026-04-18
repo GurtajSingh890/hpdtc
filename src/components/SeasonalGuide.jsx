@@ -402,7 +402,7 @@ export default function SeasonalGuide() {
   const activeData = SEASONS.find((s) => s.id === activeSeason);
 
   return (
-    <section className="py-5 bg-h-white">
+    <section className="py-5">
       <Container className="py-5">
         <Row className="align-items-start gy-5">
 

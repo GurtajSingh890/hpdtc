@@ -59,7 +59,7 @@ const PlanYourTrip = () => {
   ];
 
   return (
-    <div className="plan-your-trip bg-light min-vh-100">
+    <div className="plan-your-trip bg-h-background min-vh-100">
       {/* Hero Section */}
       <section className="position-relative overflow-hidden py-5 mb-5" 
                style={{ 

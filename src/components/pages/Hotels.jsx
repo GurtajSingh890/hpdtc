@@ -73,7 +73,7 @@ const HOTELS = [
 
 export default function Hotels() {
   return (
-    <div className="pb-20 min-h-screen" style={{ backgroundColor: '#f8f9fc', fontFamily: 'sans-serif' }}>
+    <div className="pb-20 min-h-screen bg-h-background" style={{fontFamily: 'sans-serif' }}>
 
       {/* ── Hero ── */}
       <div className="relative mb-16 overflow-hidden min-h-[60vh] pb-12" style={{ borderRadius: '0 0 40px 40px' }}>

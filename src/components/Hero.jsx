@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <MotionConfig transition={LAYOUT_SPRING}>
-      <div className="position-relative vh-100 w-100 overflow-hidden d-flex">
+      <div className="position-relative vh-110 w-100 overflow-hidden d-flex">
         <div
           className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden"
           style={{ zIndex: 0 }}
@@ -366,6 +366,18 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 w-full leading-[0] z-20">
+  <svg 
+    viewBox="0 0 1440 320" 
+    preserveAspectRatio="none" 
+    className="relative block w-full h-[120px] lg:h-[180px]"
+    fill="#f0ead2" /* Match your section background exactly */
+  >
+    <path 
+      d="M0,220 C480,100 960,400 1440,220 L1440,320 L0,320 Z"
+    ></path>
+  </svg>
+</div>
         </Container>
       </div>
     </MotionConfig>

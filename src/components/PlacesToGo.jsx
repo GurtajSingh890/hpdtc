@@ -49,7 +49,7 @@ const places = [
 
 export default function PlacesToGo() {
   return (
-    <section className="py-5 bg-white">
+    <section className="py-5">
       <Container className="py-5">
         <div className="d-flex justify-content-between align-items-end mb-5">
           <div>
