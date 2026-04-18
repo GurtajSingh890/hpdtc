@@ -7,7 +7,7 @@ import SpitiMonasteryImg from './images/spitiy.webp';
 
 export default function Story() {
   return (
-    <section className="py-5 bg-h-white position-relative overflow-hidden">
+    <section className="py-5 position-relative overflow-hidden">
       <Container className="py-5">
         <Row className="align-items-center gy-5">
 

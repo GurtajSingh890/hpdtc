@@ -138,7 +138,7 @@ export default function ItineraryBuilder() {
   };
 
   return (
-    <section className="py-5 bg-h-blue text-white position-relative overflow-hidden">
+    <section className="py-5 text-white position-relative overflow-hidden glass-section-dark">
       <div className="position-absolute top-0 start-0 w-100 h-100 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
       
       <Container className="py-5 position-relative z-1">

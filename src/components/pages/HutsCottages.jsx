@@ -6,9 +6,6 @@ import {
   Search, SlidersHorizontal
 } from 'lucide-react';
 
-/* ─────────────────────────────────────────
-   DATA  –  HPTDC-inspired huts & cottages
-   ───────────────────────────────────────── */
 const COTTAGES = [
   {
     id: 1,
@@ -153,9 +150,6 @@ const FEATURES = [
 
 const CATEGORIES = ['All', 'Log Hut', 'Cottage', 'Chalet', 'Hut'];
 
-/* ─────────────────────────────────────────
-   COMPONENT
-   ───────────────────────────────────────── */
 export default function HutsCottages() {
   const [wishlist, setWishlist] = useState([]);
   const [search, setSearch]     = useState('');
@@ -172,7 +166,7 @@ export default function HutsCottages() {
     setWishlist((prev) => prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]);
 
   return (
-    <div className="pb-20 bg-[#f5f7fb] min-h-screen font-sans text-gray-800">
+    <div className="pb-20 bg-h-background min-h-screen font-sans text-gray-800">
 
       {/* ── HERO ── */}
       <div className="relative min-h-[60vh] pb-16 mb-20 overflow-hidden bg-cover bg-center">
@@ -243,7 +237,7 @@ export default function HutsCottages() {
         {/* wave divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 60L1440 60L1440 0C1200 50 900 65 720 40C540 15 240 50 0 0L0 60Z" fill="#f5f7fb" />
+            <path d="M0 60L1440 60L1440 0C1200 50 900 65 720 40C540 15 240 50 0 0L0 60Z" fill="var(--h-background)" />
           </svg>
         </div>
       </div>

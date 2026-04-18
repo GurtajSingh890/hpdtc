@@ -42,16 +42,8 @@ const CATEGORIES = [
 
 export default function HorizontalCategories() {
   return (
-    <section className="py-5 bg-light position-relative" style={{ overflow: 'hidden' }}>
-      {/* Decorative Background Elements */}
-      <div 
-        className="position-absolute rounded-circle bg-primary" 
-        style={{ width: '400px', height: '400px', top: '-10%', left: '-5%', filter: 'blur(100px)', zIndex: 0, opacity: 0.15 }}
-      />
-      <div 
-        className="position-absolute rounded-circle bg-success" 
-        style={{ width: '300px', height: '300px', bottom: '-10%', right: '-5%', filter: 'blur(80px)', zIndex: 0, opacity: 0.15 }}
-      />
+    <section className="py-5 position-relative" style={{ overflow: 'hidden' }}>
+      {/* Decorative blobs removed — canvas orbs provide ambient colour depth */}
 
       <Container className="py-5 position-relative z-1">
         <div className="text-center mb-5">

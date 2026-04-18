@@ -28,10 +28,8 @@ export default function InteractiveMap() {
   return (
     <section
       id="interactive-map"
-      className="py-5 position-relative overflow-hidden"
+      className="py-5 position-relative overflow-hidden glass-section-dark"
       style={{
-        background:
-          "radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 100%)", // Deep Navy/Black Gradient
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",

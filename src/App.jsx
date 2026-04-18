@@ -13,6 +13,7 @@ import ItineraryBuilder from './components/ItineraryBuilder';
 import SocialProof from './components/SocialProof';
 import AIChatbot from './components/AIChatbot';
 import Footer from './components/Footer';
+import PageCanvas from './components/PageCanvas';
 
 // pages
 import Hotels from "./components/pages/Hotels";
@@ -41,16 +42,12 @@ function ScrollToTop() {
   const { pathname, key } = useLocation();
 
   useEffect(() => {
-    // 1. Temporarily disable the global 'smooth' scroll CSS behavior
     const originalStyle = window.getComputedStyle(document.documentElement).scrollBehavior;
     document.documentElement.style.scrollBehavior = "auto";
 
-    // 2. Use a small timeout (50ms) to ensure the dropdown exit animation 
-    // and body scroll lock have been processed by the browser.
     const scrollTimeout = setTimeout(() => {
       window.scrollTo(0, 0);
       
-      // 3. Restore global scroll behavior after a brief moment
       setTimeout(() => {
         document.documentElement.style.scrollBehavior = originalStyle;
       }, 50);
@@ -64,7 +61,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="position-relative min-vh-100 bg-white">
+    <div className="position-relative min-vh-100">
       <ScrollToTop />
       
       <Navbar />
@@ -74,15 +71,17 @@ export default function App() {
           path="/"
           element={
             <main>
-              <Hero />
-              <HorizontalCategories />
-              <ItineraryBuilder />
-              <Story />
-              <PlacesToGo />
-              <SeasonalGuide />
-              <InteractiveMap />
-              <PropertyShowcase />
-              <SocialProof />
+              <PageCanvas>
+                <Hero />
+                <HorizontalCategories />
+                <ItineraryBuilder />
+                <Story />
+                <PlacesToGo />
+                <SeasonalGuide />
+                <InteractiveMap />
+                <PropertyShowcase />
+                <SocialProof />
+              </PageCanvas>
             </main>
           }
         />

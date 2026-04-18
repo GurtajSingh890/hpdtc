@@ -38,7 +38,7 @@ const properties = [
 
 export default function PropertyShowcase() {
   return (
-    <section className="py-5 bg-light">
+    <section className="py-5">
       <Container className="py-5">
         <div className="d-flex justify-content-between align-items-end mb-5">
           <div>
@@ -64,7 +64,7 @@ export default function PropertyShowcase() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="h-100"
               >
-                <Card className="h-100 border-0 shadow-sm rounded-4 overflow-hidden group">
+                <Card className="h-100 border-0 rounded-4 overflow-hidden group glass-card">
                   <div className="position-relative overflow-hidden" style={{ height: '250px' }}>
                     <Card.Img 
                       variant="top" 

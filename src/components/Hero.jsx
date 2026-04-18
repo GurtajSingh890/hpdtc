@@ -3,7 +3,7 @@ import { motion, MotionConfig } from "motion/react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import HimachalHero from "./images/_hero_3.webp";
-import HeroCard from "./images/dharamshala.webp";
+import HeroCard from "./images/key_monastry2.jpg";
 
 const LAYOUT_SPRING = { type: "spring", stiffness: 200, damping: 28 };
 
@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <MotionConfig transition={LAYOUT_SPRING}>
-      <div className="position-relative vh-100 w-100 overflow-hidden d-flex">
+      <div className="position-relative vh-110 w-100 overflow-hidden d-flex">
         <div
           className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden"
           style={{ zIndex: 0 }}
@@ -239,7 +239,8 @@ export default function Hero() {
                       style={{
                         top: "40px",
                         left: "-26px",
-                        background: "rgba(14, 24, 40, 0.56)",
+                        background: "rgba(255, 255, 255, 0.1)",
+                        border: "1px solid rgba(14, 24, 40, 0.45)",
                         backdropFilter: "blur(12px)",
                         borderRadius: "20px",
                         padding: "16px 24px",
@@ -249,19 +250,19 @@ export default function Hero() {
                       }}
                     >
                       <span
-                        className="d-block small text-uppercase mb-1"
+                        className="d-block small text-uppercase mb-1 font-semibold"
                         style={{
-                          color: "rgba(255, 255, 255, 0.7)",
+                          color: "rgb(14, 24, 40)",
                           letterSpacing: "1px",
                         }}
                       >
-                        Highest Peak
+                        THE HIGH DESERT
                       </span>
                       <h3
                         className="h5 mb-0 fw-semibold"
                         style={{ color: "var(--h-saffron)" }}
                       >
-                        Reo Purgyil
+                        Spiti
                       </h3>
                     </motion.div>
 
@@ -273,7 +274,8 @@ export default function Hero() {
                       style={{
                         bottom: "56px",
                         right: "-24px",
-                        background: "rgba(14, 24, 40, 0.76)",
+                        background: "rgba(255, 255, 255, 0.1)",
+                        border: "1px solid rgba(14, 24, 40, 0.45)",
                         backdropFilter: "blur(12px)",
                         borderRadius: "20px",
                         padding: "16px 24px",
@@ -283,9 +285,9 @@ export default function Hero() {
                       }}
                     >
                       <span
-                        className="d-block small text-uppercase mb-1"
+                        className="d-block small text-uppercase mb-1 font-semibold"
                         style={{
-                          color: "rgba(255, 255, 255, 0.6)",
+                          color: "rgb(14, 24, 40)",
                           letterSpacing: "1px",
                         }}
                       >
@@ -295,7 +297,7 @@ export default function Hero() {
                         className="h5 mb-0 fw-semibold"
                         style={{ color: "var(--h-saffron)" }}
                       >
-                        Serene & Untamed
+                        Eternal & Astral
                       </h3>
                     </motion.div>
                   </div>
@@ -364,6 +366,18 @@ export default function Hero() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 w-full leading-[0] z-20">
+  <svg 
+    viewBox="0 0 1440 320" 
+    preserveAspectRatio="none" 
+    className="relative block w-full h-[120px] lg:h-[180px]"
+    fill="#f0ead2" /* Match your section background exactly */
+  >
+    <path 
+      d="M0,220 C480,100 960,400 1440,220 L1440,320 L0,320 Z"
+    ></path>
+  </svg>
+</div>
         </Container>
       </div>
     </MotionConfig>
