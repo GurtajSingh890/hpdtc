@@ -147,7 +147,7 @@ export default function ItineraryBuilder() {
           <Col lg={step === 4 ? 12 : 6}>
             <motion.div animate={{ opacity: step === 4 ? 0 : 1, y: step === 4 ? -20 : 0 }} className={step === 4 ? 'd-none' : ''}>
 
-              <h2 className="display-4 font-serif fw-bold mb-4">
+              <h2 className="display-4 font-serif fw-bold mb-1 mb-md-4">
                 Design Your Perfect <br/>Himachal Journey
               </h2>
               <p className="lead text-white-50 mb-4 mb-md-5" style={{ maxWidth: '500px' }}>
